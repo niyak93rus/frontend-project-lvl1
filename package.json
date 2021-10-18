@@ -1,0 +1,19 @@
+{
+  "name": "@hexlet/code",
+  "version": "1.0.0",
+  "description": "project #1",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/niyak93rus/frontend-project-lvl1.git"
+  },
+  "author": "Nikolay Yakovlev",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/niyak93rus/frontend-project-lvl1/issues"
+  },
+  "homepage": "https://github.com/niyak93rus/frontend-project-lvl1#readme"
+}
