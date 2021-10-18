@@ -1,0 +1,12 @@
+env:
+  es2021: true
+  node: true
+extends:
+  - airbnb-base
+parserOptions:
+  ecmaVersion: 11
+  sourceType: module
+rules:
+  no-console: 0
+  import/extensions: 0 # FIXME: remove when rule will be adjusted for new nodejs version
+  no-underscore-dangle: [2, { "allow": ["__filename", "__dirname"] }]
