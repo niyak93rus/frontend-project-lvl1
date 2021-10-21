@@ -8,6 +8,10 @@
 
 ![linter-check](https://github.com/niyak93rus/frontend-project-lvl1/actions/workflows/linter-check.yml/badge.svg)
 
-### DEMO (asciinema):
+### DEMO (brain-even):
 
 https://asciinema.org/a/DjtfQ3LgHfsU0brRXAhcWdGut
+
+### DEMO (brain-calc):
+
+https://asciinema.org/a/KWFEEHLkojfSBHtZt4O9wXpCz
