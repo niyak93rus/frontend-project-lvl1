@@ -20,7 +20,7 @@ const gcdGame = () => {
   }
 
   console.log('Find the greatest common divisor of given numbers.');
-  console.log(`${firstNumber} ${secondNumber}`);
+  console.log(`Question: ${firstNumber} ${secondNumber}`);
 
   return answer.toString();
 };
