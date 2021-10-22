@@ -27,7 +27,7 @@ const progressGame = () => {
   const index = numbers.indexOf(hiddenElement);
 
   numbers[index] = '..';
-  console.log(numbers.join(', '));
+  console.log(`Question: ${numbers.join(', ')}`);
 
   return hiddenElement.toString();
 };
