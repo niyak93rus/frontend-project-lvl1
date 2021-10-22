@@ -19,3 +19,7 @@ https://asciinema.org/a/KWFEEHLkojfSBHtZt4O9wXpCz
 ### DEMO (brain-gcd):
 
 https://asciinema.org/a/9Vgfe8ujU4YJs0kJ9GS35MtMF
+
+### DEMO (brain-progression):
+
+https://asciinema.org/a/htmQ7HACD6OJB4EiHkMcV7sil
