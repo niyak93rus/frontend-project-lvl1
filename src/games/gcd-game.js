@@ -1,3 +1,4 @@
+import findMaxItem from '../find-max-item.js';
 import getRandomInt from '../get-random.js';
 
 const gcdGame = () => {
@@ -5,7 +6,6 @@ const gcdGame = () => {
   const secondNumber = getRandomInt(50);
 
   let max;
-  let answer;
 
   if (firstNumber > secondNumber) {
     max = firstNumber;
@@ -13,11 +13,13 @@ const gcdGame = () => {
     max = secondNumber;
   }
 
+  const divisors = [];
   for (let i = 1; i < max; i += 1) {
     if (firstNumber % i === 0 && secondNumber % i === 0) {
-      answer = i;
+      divisors.push(i);
     }
   }
+  const answer = findMaxItem(divisors);
 
   console.log('Find the greatest common divisor of given numbers.');
   console.log(`Question: ${firstNumber} ${secondNumber}`);
