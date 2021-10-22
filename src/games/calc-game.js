@@ -22,7 +22,7 @@ const calcGame = () => {
   }
 
   console.log('What is the result of the expression?');
-  console.log(`${expression}`);
+  console.log(`Question: ${expression}`);
 
   const correctAnswer = result.toString();
   return correctAnswer;
