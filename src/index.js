@@ -4,6 +4,7 @@ import calcGame from './games/calc-game.js';
 import evenGame from './games/even-game.js';
 import gcdGame from './games/gcd-game.js';
 import progressGame from './games/progress-game.js';
+import primeGame from './games/prime-game.js';
 
 // greet user
 const gameMaster = (gameName) => {
@@ -29,6 +30,9 @@ const gameMaster = (gameName) => {
     }
     if (gameName === 'brain-progression') {
       correctAnswer = progressGame();
+    }
+    if (gameName === 'brain-prime') {
+      correctAnswer = primeGame();
     }
     const userAnswer = readlineSync.question('Your answer: ');
     // compare answer

@@ -23,3 +23,7 @@ https://asciinema.org/a/9Vgfe8ujU4YJs0kJ9GS35MtMF
 ### DEMO (brain-progression):
 
 https://asciinema.org/a/htmQ7HACD6OJB4EiHkMcV7sil
+
+### DEMO (brain-prime):
+
+https://asciinema.org/a/QTazLQvlP48oXEL8ZkhcnjYvV
