@@ -1,13 +1,8 @@
-import checkEven from './check-even.js';
-
-const checkAnswer = (number, answer) => {
-  if (checkEven(number) === true && answer === 'yes') {
-    return true;
+const checkAnswer = (userAnswer, answer) => {
+  if (userAnswer !== answer) {
+    return false;
   }
-  if (checkEven(number) === false && answer === 'no') {
-    return true;
-  }
-  return false;
+  return true;
 };
 
 export default checkAnswer;

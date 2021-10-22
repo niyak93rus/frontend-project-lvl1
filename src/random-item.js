@@ -1,5 +1,3 @@
-function randomItem(items) {
-  return items[Math.floor(Math.random() * items.length)];
-}
+const randomItem = (arr) => arr[Math.floor(Math.random() * arr.length)];
 
-export default randomItem();
+export default randomItem;

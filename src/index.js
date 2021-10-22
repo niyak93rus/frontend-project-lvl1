@@ -1,34 +1,45 @@
 import readlineSync from 'readline-sync';
 import checkAnswer from './check-answer.js';
-import getRandomInt from './get-random.js';
+import calcGame from './games/calc-game.js';
+import evenGame from './games/even-game.js';
 
-const gameMaster = () => {
+// greet user
+const gameMaster = (gameName) => {
+  console.log('Welcome to the Brain Games!');
+
   const name = readlineSync.question('May I have your name? ');
   console.log(`Hello, ${name}!`);
 
+  // iterate rounds
+  const maxRounds = 3;
   let counter = 0;
-  while (counter < 3) {
-    const randomNumber = getRandomInt(100);
-
-    console.log(`Question: ${randomNumber}`);
-
+  while (counter < maxRounds) {
+    // ask question
+    let correctAnswer;
+    if (gameName === 'brain-even') {
+      correctAnswer = evenGame();
+    }
+    if (gameName === 'brain-calc') {
+      correctAnswer = calcGame();
+    }
     const userAnswer = readlineSync.question('Your answer: ');
-
-    if (checkAnswer(randomNumber, userAnswer) === true) {
+    // compare answer
+    if (checkAnswer(userAnswer, correctAnswer) === true) {
       counter += 1;
       console.log('Correct!');
     }
-    if (checkAnswer(randomNumber, userAnswer) === false) {
-      if (userAnswer === 'yes') {
-        console.log("'yes' is wrong answer ;(. Correct answer was 'no'.");
-      } else {
-        console.log("'no' is wrong answer ;(. Correct answer was 'yes'.");
-      }
+    if (checkAnswer(userAnswer, correctAnswer) === false) {
+      console.log(
+        // eslint-disable-next-line comma-dangle
+        `'${userAnswer}' is wrong answer ;(. Correct answer was '${correctAnswer}'.`
+      );
       console.log(`Let's try again, ${name}!`);
-      return 1;
+      return;
     }
   }
-  return console.log(`Congratulations, ${name}!`);
+
+  // finish
+  console.log(`Congratulations, ${name}!`);
 };
 
-export default gameMaster();
+export default gameMaster;
