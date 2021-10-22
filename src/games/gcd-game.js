@@ -13,7 +13,7 @@ const gcdGame = () => {
     max = secondNumber;
   }
 
-  for (let i = 0; i < max; i += 1) {
+  for (let i = 1; i < max; i += 1) {
     if (firstNumber % i === 0 && secondNumber % i === 0) {
       answer = i;
     }
