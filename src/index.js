@@ -2,6 +2,7 @@ import readlineSync from 'readline-sync';
 import checkAnswer from './check-answer.js';
 import calcGame from './games/calc-game.js';
 import evenGame from './games/even-game.js';
+import gcdGame from './games/gcd-game.js';
 
 // greet user
 const gameMaster = (gameName) => {
@@ -21,6 +22,9 @@ const gameMaster = (gameName) => {
     }
     if (gameName === 'brain-calc') {
       correctAnswer = calcGame();
+    }
+    if (gameName === 'brain-gcd') {
+      correctAnswer = gcdGame();
     }
     const userAnswer = readlineSync.question('Your answer: ');
     // compare answer
