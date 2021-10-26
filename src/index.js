@@ -35,10 +35,6 @@ const gameMaster = (gameName) => {
     }
     const userAnswer = readlineSync.question('Your answer: ');
     // compare answer
-    if (userAnswer === correctAnswer) {
-      counter += 1;
-      console.log('Correct!');
-    }
     if (userAnswer !== correctAnswer) {
       console.log(
         // eslint-disable-next-line comma-dangle
@@ -47,6 +43,8 @@ const gameMaster = (gameName) => {
       console.log(`Let's try again, ${name}!`);
       return;
     }
+    counter += 1;
+    console.log('Correct!');
   }
 
   // finish
