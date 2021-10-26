@@ -1,5 +1,4 @@
 import readlineSync from 'readline-sync';
-import checkAnswer from './check-answer.js';
 import calcGame from './games/calc-game.js';
 import evenGame from './games/even-game.js';
 import gcdGame from './games/gcd-game.js';
@@ -36,11 +35,11 @@ const gameMaster = (gameName) => {
     }
     const userAnswer = readlineSync.question('Your answer: ');
     // compare answer
-    if (checkAnswer(userAnswer, correctAnswer) === true) {
+    if (userAnswer === correctAnswer) {
       counter += 1;
       console.log('Correct!');
     }
-    if (checkAnswer(userAnswer, correctAnswer) === false) {
+    if (userAnswer !== correctAnswer) {
       console.log(
         // eslint-disable-next-line comma-dangle
         `'${userAnswer}' is wrong answer ;(. Correct answer was '${correctAnswer}'.`
