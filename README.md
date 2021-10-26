@@ -1,8 +1,4 @@
-[![Actions Status](https://github.com/niyak93rus/frontend-project-lvl1/workflows/hexlet-check/badge.svg)](https://github.com/niyak93rus/frontend-project-lvl1/actions)
-
-[![Maintainability](https://api.codeclimate.com/v1/badges/80c90e54a2faaab18100/maintainability)](https://codeclimate.com/github/niyak93rus/frontend-project-lvl1/maintainability)
-
-![linter-check](https://github.com/niyak93rus/frontend-project-lvl1/actions/workflows/linter-check.yml/badge.svg)
+[![Actions Status](https://github.com/niyak93rus/frontend-project-lvl1/workflows/hexlet-check/badge.svg)](https://github.com/niyak93rus/frontend-project-lvl1/actions) [![Maintainability](https://api.codeclimate.com/v1/badges/80c90e54a2faaab18100/maintainability)](https://codeclimate.com/github/niyak93rus/frontend-project-lvl1/maintainability) ![linter-check](https://github.com/niyak93rus/frontend-project-lvl1/actions/workflows/linter-check.yml/badge.svg)
 
 ## Setup for all games:
 
