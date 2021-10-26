@@ -4,7 +4,7 @@
 
 ### CodeClimate Maintainabilty:
 
-[![Maintainability](https://api.codeclimate.com/v1/badges/a99a88d28ad37a79dbf6/maintainability)](https://codeclimate.com/github/niyak93rus/frontend-project-lvl1)
+[![Maintainability](https://api.codeclimate.com/v1/badges/80c90e54a2faaab18100/maintainability)](https://codeclimate.com/github/niyak93rus/frontend-project-lvl1/maintainability)
 
 ![linter-check](https://github.com/niyak93rus/frontend-project-lvl1/actions/workflows/linter-check.yml/badge.svg)
 
