@@ -1,5 +1,6 @@
 #!/usr/bin/env node
+import primeGame from '../src/games/prime-game.js';
 import gameMaster from '../src/index.js';
 
-const gameName = 'brain-prime';
-gameMaster(gameName);
+const rules = 'Answer "yes" if given number is prime. Otherwise answer "no".';
+gameMaster(rules, primeGame());

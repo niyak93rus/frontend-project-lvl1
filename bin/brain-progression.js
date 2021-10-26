@@ -1,5 +1,6 @@
 #!/usr/bin/env node
+import progressGame from '../src/games/progress-game.js';
 import gameMaster from '../src/index.js';
 
-const gameName = 'brain-progression';
-gameMaster(gameName);
+const rules = 'What number is missing in the progression?';
+gameMaster(rules, progressGame());
