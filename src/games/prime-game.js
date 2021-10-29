@@ -24,13 +24,7 @@ const primeGame = () => {
 
     const question = `Question: ${number}`;
 
-    let correctAnswer;
-    if (isPrime(number) === true) {
-      correctAnswer = 'yes';
-    } else {
-      correctAnswer = 'no';
-    }
-    pairs.push(cons(question, correctAnswer));
+    pairs.push(cons(question, isPrime(number) ? 'yes' : 'no'));
 
     counter += 1;
   }
