@@ -1,7 +1,7 @@
 import { cons } from '@hexlet/pairs';
 import getRandomInt from '../get-random.js';
 import { maxRounds } from '../index.js';
-import randomItem from '../random-item.js';
+import getRandomItem from '../get-random-item.js';
 
 const progressGame = () => {
   const rules = 'What number is missing in the progression?';
@@ -31,7 +31,7 @@ const progressGame = () => {
       numbers.push(j);
     }
 
-    const hiddenElement = randomItem(numbers);
+    const hiddenElement = getRandomItem(numbers);
     const index = numbers.indexOf(hiddenElement);
 
     numbers[index] = '..';
