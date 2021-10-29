@@ -1,10 +1,16 @@
 import { cons } from '@hexlet/pairs';
 import getRandomInt from '../get-random.js';
 import { maxRounds } from '../index.js';
-import isEven from '../isEven.js';
 
 const evenGame = () => {
   const rules = 'Answer "yes" if the number is even, otherwise answer "no".';
+
+  const isEven = (num) => {
+    if (num % 2 === 0) {
+      return true;
+    }
+    return false;
+  };
 
   let correctAnswer;
 
