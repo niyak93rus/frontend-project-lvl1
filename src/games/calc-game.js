@@ -1,6 +1,6 @@
 import { cons } from '@hexlet/pairs';
 import getRandomInt from '../get-random.js';
-import randomItem from '../random-item.js';
+import randomItem from '../get-random-item.js';
 import { maxRounds } from '../index.js';
 
 const calcGame = () => {

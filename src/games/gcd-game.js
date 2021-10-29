@@ -1,10 +1,20 @@
 import { cons } from '@hexlet/pairs';
 import { maxRounds } from '../index.js';
-import findMaxItem from '../find-max-item.js';
 import getRandomInt from '../get-random.js';
 
 const gcdGame = () => {
   const rules = 'Find the greatest common divisor of given numbers.';
+
+  const findMaxItem = (arr) => {
+    let maxItem;
+    for (let i = 0; i < arr.length; i += 1) {
+      maxItem = arr.indexOf(arr[0]);
+      if (arr[i] > maxItem) {
+        maxItem = arr[i];
+      }
+    }
+    return maxItem;
+  };
 
   let counter = 0;
   const pairs = [];
