@@ -6,9 +6,24 @@ import { maxRounds } from '../index.js';
 const calcGame = () => {
   const rules = 'What is the result of the expression?';
 
-  let counter = 0;
+  const calculate = (num1, num2, operand) => {
+    let result;
+    switch (operand) {
+      case '+':
+        result = num1 + num2;
+        break;
+      case '-':
+        result = num1 - num2;
+        break;
+      default:
+        result = num1 * num2;
+        break;
+    }
+    return result;
+  };
+
   const pairs = [];
-  while (counter < maxRounds) {
+  for (let i = 0; i < maxRounds; i += 1) {
     const arr = ['+', '-', '*'];
 
     const firstNum = getRandomInt(25);
@@ -17,23 +32,10 @@ const calcGame = () => {
 
     const expression = `${firstNum} ${operand} ${secondNum}`;
 
-    let result;
-    if (operand === arr[0]) {
-      result = firstNum + secondNum;
-    }
-    if (operand === arr[1]) {
-      result = firstNum - secondNum;
-    }
-    if (operand === arr[2]) {
-      result = firstNum * secondNum;
-    }
-
     const question = `Question: ${expression}`;
-    const correctAnswer = result.toString();
+    const correctAnswer = calculate(firstNum, secondNum, operand).toString();
 
     pairs.push(cons(question, correctAnswer));
-
-    counter += 1;
   }
 
   return { rules, pairs };
