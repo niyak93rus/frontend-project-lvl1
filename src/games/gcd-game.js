@@ -16,9 +16,8 @@ const gcdGame = () => {
     return maxItem;
   };
 
-  let counter = 0;
   const pairs = [];
-  while (counter < maxRounds) {
+  for (let i = 0; i < maxRounds; i += 1) {
     const firstNumber = getRandomInt(50);
     const secondNumber = getRandomInt(50);
 
@@ -31,9 +30,9 @@ const gcdGame = () => {
     }
 
     const divisors = [];
-    for (let i = 1; i <= max; i += 1) {
-      if (firstNumber % i === 0 && secondNumber % i === 0) {
-        divisors.push(i);
+    for (let j = 1; j <= max; j += 1) {
+      if (firstNumber % j === 0 && secondNumber % j === 0) {
+        divisors.push(j);
       }
     }
     const answer = findMaxItem(divisors);
@@ -41,8 +40,6 @@ const gcdGame = () => {
 
     const correctAnswer = answer.toString();
     pairs.push(cons(question, correctAnswer));
-
-    counter += 1;
   }
 
   return { rules, pairs };

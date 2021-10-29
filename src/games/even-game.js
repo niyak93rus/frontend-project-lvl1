@@ -12,21 +12,12 @@ const evenGame = () => {
     return false;
   };
 
-  let correctAnswer;
-
-  let counter = 0;
   const pairs = [];
-  while (counter < maxRounds) {
+  for (let i = 0; i < maxRounds; i += 1) {
     const number = getRandomInt(25);
     const question = `Question: ${number}`;
-    if (isEven(number) === true) {
-      correctAnswer = 'yes';
-    } else {
-      correctAnswer = 'no';
-    }
-    pairs.push(cons(question, correctAnswer));
 
-    counter += 1;
+    pairs.push(cons(question, isEven(number) ? 'yes' : 'no'));
   }
 
   return { rules, pairs };
