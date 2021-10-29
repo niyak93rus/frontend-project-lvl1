@@ -9,8 +9,8 @@ const gcdGame = () => {
 
   const pairs = [];
   for (let i = 0; i < maxRounds; i += 1) {
-    const firstNumber = getRandomInt(50);
-    const secondNumber = getRandomInt(50);
+    const firstNumber = getRandomInt(0, 50);
+    const secondNumber = getRandomInt(0, 50);
 
     const question = `Question: ${firstNumber} ${secondNumber}`;
 

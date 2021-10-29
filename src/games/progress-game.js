@@ -1,47 +1,34 @@
 import { cons } from '@hexlet/pairs';
 import getRandomInt from '../get-random.js';
 import { maxRounds } from '../index.js';
-import getRandomItem from '../get-random-item.js';
 
 const progressGame = () => {
   const rules = 'What number is missing in the progression?';
 
-  let counter = 0;
   const pairs = [];
 
-  while (counter < maxRounds) {
-    let length = getRandomInt(10);
-    while (length < 5) {
-      length = getRandomInt(10);
-    }
+  const progression = (start, step, i) => {
+    const val = start + i * step;
+    return val;
+  };
 
-    let progressor = getRandomInt(10);
-    while (progressor < 1) {
-      progressor = getRandomInt(10);
-    }
+  for (let counter = 0; counter < maxRounds; counter += 1) {
+    const length = getRandomInt(5, 10);
+    const startNumber = getRandomInt(0, 20);
+    const progressor = getRandomInt(1, 10);
 
     const numbers = [];
-    const startNumber = getRandomInt(20);
-
-    for (
-      let j = startNumber, i = 0;
-      i < length && j < length * progressor + startNumber;
-      j += progressor, i += 1
-    ) {
-      numbers.push(j);
+    for (let i = 0; i < length; i += 1) {
+      numbers.push(progression(startNumber, progressor, i));
     }
 
-    const hiddenElement = getRandomItem(numbers);
-    const index = numbers.indexOf(hiddenElement);
+    const hiddenElement = getRandomInt(0, numbers.length);
+    const correctAnswer = numbers[hiddenElement].toString();
 
-    numbers[index] = '..';
+    numbers[hiddenElement] = '..';
     const question = `Question: ${numbers.join(' ')}`;
 
-    const correctAnswer = hiddenElement.toString();
-
     pairs.push(cons(question, correctAnswer));
-
-    counter += 1;
   }
 
   return { rules, pairs };

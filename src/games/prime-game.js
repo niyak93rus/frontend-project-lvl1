@@ -16,17 +16,14 @@ const primeGame = () => {
     return true;
   };
 
-  let counter = 0;
   const pairs = [];
 
-  while (counter < maxRounds) {
-    const number = getRandomInt(100);
+  for (let i = 0; i < maxRounds; i += 1) {
+    const number = getRandomInt(0, 100);
 
     const question = `Question: ${number}`;
 
     pairs.push(cons(question, isPrime(number) ? 'yes' : 'no'));
-
-    counter += 1;
   }
 
   return { rules, pairs };

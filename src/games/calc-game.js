@@ -26,9 +26,9 @@ const calcGame = () => {
   for (let i = 0; i < maxRounds; i += 1) {
     const arr = ['+', '-', '*'];
 
-    const firstNum = getRandomInt(25);
+    const firstNum = getRandomInt(1, 25);
     const operand = randomItem(arr);
-    const secondNum = getRandomInt(25);
+    const secondNum = getRandomInt(1, 25);
 
     const expression = `${firstNum} ${operand} ${secondNum}`;
 
