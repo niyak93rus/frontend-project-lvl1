@@ -1,10 +1,20 @@
 import { cons } from '@hexlet/pairs';
 import { maxRounds } from '../index.js';
 import getRandomInt from '../get-random.js';
-import isPrime from '../isPrime.js';
 
 const primeGame = () => {
   const rules = 'Answer "yes" if given number is prime. Otherwise answer "no".';
+
+  const isPrime = (num) => {
+    let i = 2;
+    while (i < num) {
+      if (num % i === 0) {
+        return false;
+      }
+      i += 1;
+    }
+    return true;
+  };
 
   let counter = 0;
   const pairs = [];
