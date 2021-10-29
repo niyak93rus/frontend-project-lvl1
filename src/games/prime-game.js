@@ -4,6 +4,8 @@ import getRandomInt from '../get-random.js';
 import isPrime from '../isPrime.js';
 
 const primeGame = () => {
+  const rules = 'Answer "yes" if given number is prime. Otherwise answer "no".';
+
   let counter = 0;
   const pairs = [];
 
@@ -23,7 +25,7 @@ const primeGame = () => {
     counter += 1;
   }
 
-  return pairs;
+  return { rules, pairs };
 };
 
 export default primeGame;

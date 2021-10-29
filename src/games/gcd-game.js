@@ -4,6 +4,8 @@ import findMaxItem from '../find-max-item.js';
 import getRandomInt from '../get-random.js';
 
 const gcdGame = () => {
+  const rules = 'Find the greatest common divisor of given numbers.';
+
   let counter = 0;
   const pairs = [];
   while (counter < maxRounds) {
@@ -33,7 +35,7 @@ const gcdGame = () => {
     counter += 1;
   }
 
-  return pairs;
+  return { rules, pairs };
 };
 
 export default gcdGame;

@@ -4,6 +4,8 @@ import randomItem from '../random-item.js';
 import { maxRounds } from '../index.js';
 
 const calcGame = () => {
+  const rules = 'What is the result of the expression?';
+
   let counter = 0;
   const pairs = [];
   while (counter < maxRounds) {
@@ -34,7 +36,7 @@ const calcGame = () => {
     counter += 1;
   }
 
-  return pairs;
+  return { rules, pairs };
 };
 
 export default calcGame;

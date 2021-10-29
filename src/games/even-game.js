@@ -4,6 +4,8 @@ import { maxRounds } from '../index.js';
 import isEven from '../isEven.js';
 
 const evenGame = () => {
+  const rules = 'Answer "yes" if the number is even, otherwise answer "no".';
+
   let correctAnswer;
 
   let counter = 0;
@@ -21,7 +23,7 @@ const evenGame = () => {
     counter += 1;
   }
 
-  return pairs;
+  return { rules, pairs };
 };
 
 export default evenGame;

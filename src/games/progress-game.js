@@ -4,6 +4,8 @@ import { maxRounds } from '../index.js';
 import randomItem from '../random-item.js';
 
 const progressGame = () => {
+  const rules = 'What number is missing in the progression?';
+
   let counter = 0;
   const pairs = [];
 
@@ -42,7 +44,7 @@ const progressGame = () => {
     counter += 1;
   }
 
-  return pairs;
+  return { rules, pairs };
 };
 
 export default progressGame;
