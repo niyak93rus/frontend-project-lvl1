@@ -1,9 +1,10 @@
 import { cons } from '@hexlet/pairs';
 import getRandomInt from '../get-random.js';
-import getRandomItem from '../get-random-item.js';
 import { maxRounds } from '../index.js';
 
 const calcGame = () => {
+  const getRandomItem = (arr) => arr[getRandomInt(0, arr.length)];
+
   const rules = 'What is the result of the expression?';
 
   const calculate = (num1, num2, operand) => {
