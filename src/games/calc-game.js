@@ -2,6 +2,8 @@ import { cons } from '@hexlet/pairs';
 import getRandomInt from '../get-random-int.js';
 import { maxRounds } from '../index.js';
 
+const operands = ['+', '-', '*'];
+
 const calculate = (num1, num2, operand) => {
   let result;
   switch (operand) {
@@ -20,17 +22,15 @@ const calculate = (num1, num2, operand) => {
   return result;
 };
 
+const getRandomItem = (items) => items[getRandomInt(0, items.length)];
+
+const rules = 'What is the result of the expression?';
+
 const calcGame = () => {
-  const getRandomItem = (arr) => arr[getRandomInt(0, arr.length)];
-
-  const rules = 'What is the result of the expression?';
-
   const pairs = [];
   for (let i = 0; i < maxRounds; i += 1) {
-    const arr = ['+', '-', '*'];
-
     const firstNum = getRandomInt(1, 25);
-    const operand = getRandomItem(arr);
+    const operand = getRandomItem(operands);
     const secondNum = getRandomInt(1, 25);
 
     const expression = `${firstNum} ${operand} ${secondNum}`;
