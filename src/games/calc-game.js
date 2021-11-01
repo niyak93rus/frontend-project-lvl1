@@ -11,9 +11,11 @@ const calculate = (num1, num2, operand) => {
     case '-':
       result = num1 - num2;
       break;
-    default:
+    case '*':
       result = num1 * num2;
       break;
+    default:
+      return null;
   }
   return result;
 };
