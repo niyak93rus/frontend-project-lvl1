@@ -1,27 +1,27 @@
 import { cons } from '@hexlet/pairs';
-import getRandomInt from '../get-random.js';
+import getRandomInt from '../get-random-int.js';
 import { maxRounds } from '../index.js';
+
+const calculate = (num1, num2, operand) => {
+  let result;
+  switch (operand) {
+    case '+':
+      result = num1 + num2;
+      break;
+    case '-':
+      result = num1 - num2;
+      break;
+    default:
+      result = num1 * num2;
+      break;
+  }
+  return result;
+};
 
 const calcGame = () => {
   const getRandomItem = (arr) => arr[getRandomInt(0, arr.length)];
 
   const rules = 'What is the result of the expression?';
-
-  const calculate = (num1, num2, operand) => {
-    let result;
-    switch (operand) {
-      case '+':
-        result = num1 + num2;
-        break;
-      case '-':
-        result = num1 - num2;
-        break;
-      default:
-        result = num1 * num2;
-        break;
-    }
-    return result;
-  };
 
   const pairs = [];
   for (let i = 0; i < maxRounds; i += 1) {

@@ -1,6 +1,6 @@
 import { cons } from '@hexlet/pairs';
 import { maxRounds } from '../index.js';
-import getRandomInt from '../get-random.js';
+import getRandomInt from '../get-random-int.js';
 
 const primeGame = () => {
   const rules = 'Answer "yes" if given number is prime. Otherwise answer "no".';

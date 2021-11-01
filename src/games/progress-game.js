@@ -1,5 +1,5 @@
 import { cons } from '@hexlet/pairs';
-import getRandomInt from '../get-random.js';
+import getRandomInt from '../get-random-int.js';
 import { maxRounds } from '../index.js';
 
 const progressGame = () => {
