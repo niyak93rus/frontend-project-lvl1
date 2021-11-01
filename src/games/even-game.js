@@ -15,9 +15,8 @@ const evenGame = () => {
   const pairs = [];
   for (let i = 0; i < maxRounds; i += 1) {
     const number = getRandomInt(1, 25);
-    const question = `Question: ${number}`;
 
-    pairs.push(cons(question, isEven(number) ? 'yes' : 'no'));
+    pairs.push(cons(number, isEven(number) ? 'yes' : 'no'));
   }
 
   return { rules, pairs };

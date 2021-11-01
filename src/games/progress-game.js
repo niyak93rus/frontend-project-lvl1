@@ -26,9 +26,8 @@ const progressGame = () => {
     const correctAnswer = numbers[hiddenElement].toString();
 
     numbers[hiddenElement] = '..';
-    const question = `Question: ${numbers.join(' ')}`;
 
-    pairs.push(cons(question, correctAnswer));
+    pairs.push(cons(numbers.join(' '), correctAnswer));
   }
 
   return { rules, pairs };

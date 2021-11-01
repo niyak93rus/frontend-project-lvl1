@@ -33,10 +33,9 @@ const calcGame = () => {
 
     const expression = `${firstNum} ${operand} ${secondNum}`;
 
-    const question = `Question: ${expression}`;
     const correctAnswer = calculate(firstNum, secondNum, operand).toString();
 
-    pairs.push(cons(question, correctAnswer));
+    pairs.push(cons(expression, correctAnswer));
   }
 
   return { rules, pairs };

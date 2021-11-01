@@ -15,14 +15,12 @@ const gameMaster = (game) => {
   // iterate pairs
   for (let i = 0; i < gameAnswer.pairs.length; i += 1) {
     // ask question and prompt user for answer
-    console.log(car(gameAnswer.pairs[i]));
+    console.log(`Question: ${car(gameAnswer.pairs[i])}`);
     const userAnswer = readlineSync.question('Your answer: ');
     // compare answer
-    if (userAnswer !== cdr(gameAnswer.pairs[i])) {
-      console.log(
-        // eslint-disable-next-line comma-dangle
-        `'${userAnswer}' is wrong answer ;(. Correct answer was '${cdr(gameAnswer.pairs[i])}'.`
-      );
+    const correctAnswer = cdr(gameAnswer.pairs[i]);
+    if (userAnswer !== correctAnswer) {
+      console.log(`'${userAnswer}' is wrong answer ;(. Correct answer was '${correctAnswer}'.`);
       console.log(`Let's try again, ${name}!`);
       return;
     }

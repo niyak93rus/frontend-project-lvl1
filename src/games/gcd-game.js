@@ -12,9 +12,7 @@ const gcdGame = () => {
     const firstNumber = getRandomInt(0, 50);
     const secondNumber = getRandomInt(0, 50);
 
-    const question = `Question: ${firstNumber} ${secondNumber}`;
-
-    pairs.push(cons(question, gcd(firstNumber, secondNumber).toString()));
+    pairs.push(cons(`${firstNumber} ${secondNumber}`, gcd(firstNumber, secondNumber).toString()));
   }
 
   return { rules, pairs };

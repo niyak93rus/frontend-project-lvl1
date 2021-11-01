@@ -21,9 +21,7 @@ const primeGame = () => {
   for (let i = 0; i < maxRounds; i += 1) {
     const number = getRandomInt(0, 100);
 
-    const question = `Question: ${number}`;
-
-    pairs.push(cons(question, isPrime(number) ? 'yes' : 'no'));
+    pairs.push(cons(number, isPrime(number) ? 'yes' : 'no'));
   }
 
   return { rules, pairs };
