@@ -2,15 +2,15 @@ import { cons } from '@hexlet/pairs';
 import getRandomInt from '../get-random-int.js';
 import { maxRounds } from '../index.js';
 
+const rules = 'What number is missing in the progression?';
+
+const progression = (start, step, i) => {
+  const val = start + i * step;
+  return val;
+};
+
 const progressGame = () => {
-  const rules = 'What number is missing in the progression?';
-
   const pairs = [];
-
-  const progression = (start, step, i) => {
-    const val = start + i * step;
-    return val;
-  };
 
   for (let counter = 0; counter < maxRounds; counter += 1) {
     const length = getRandomInt(5, 10);
