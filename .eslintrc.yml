@@ -9,4 +9,7 @@ parserOptions:
 rules:
   no-console: 0
   import/extensions: 0 # FIXME: remove when rule will be adjusted for new nodejs version
-  no-underscore-dangle: [2, { "allow": ["__filename", "__dirname"] }]
+  no-underscore-dangle: [2, { 'allow': ['__filename', '__dirname'] }]
+  no-restricted-syntax: 0
+  comma-dangle: 'only-multiline'
+  no-unneeded-ternary: 0

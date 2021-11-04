@@ -13,7 +13,7 @@ const progression = (start, step, length) => {
 };
 
 const progressGame = () => {
-  const pairs = [];
+  const roundsData = [];
 
   for (let counter = 0; counter < maxRounds; counter += 1) {
     const length = getRandomInt(5, 10);
@@ -27,10 +27,10 @@ const progressGame = () => {
 
     numbers[hiddenElement] = '..';
 
-    pairs.push(cons(numbers.join(' '), correctAnswer));
+    roundsData.push(cons(numbers.join(' '), correctAnswer));
   }
 
-  return { rules, pairs };
+  return { rules, roundsData };
 };
 
 export default progressGame;

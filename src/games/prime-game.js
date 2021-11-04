@@ -19,15 +19,15 @@ const isPrime = (number) => {
 };
 
 const primeGame = () => {
-  const pairs = [];
+  const roundsData = [];
 
   for (let i = 0; i < maxRounds; i += 1) {
     const number = getRandomInt(0, 100);
 
-    pairs.push(cons(number, isPrime(number) ? 'yes' : 'no'));
+    roundsData.push(cons(number, isPrime(number) ? 'yes' : 'no'));
   }
 
-  return { rules, pairs };
+  return { rules, roundsData };
 };
 
 export default primeGame;

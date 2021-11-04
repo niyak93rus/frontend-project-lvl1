@@ -27,7 +27,7 @@ const getRandomItem = (items) => items[getRandomInt(0, items.length)];
 const rules = 'What is the result of the expression?';
 
 const calcGame = () => {
-  const pairs = [];
+  const roundsData = [];
   for (let i = 0; i < maxRounds; i += 1) {
     const firstNum = getRandomInt(1, 25);
     const operand = getRandomItem(operands);
@@ -37,10 +37,10 @@ const calcGame = () => {
 
     const correctAnswer = calculate(firstNum, secondNum, operand).toString();
 
-    pairs.push(cons(expression, correctAnswer));
+    roundsData.push(cons(expression, correctAnswer));
   }
 
-  return { rules, pairs };
+  return { rules, roundsData };
 };
 
 export default calcGame;
