@@ -8,12 +8,10 @@ const rules = 'Find the greatest common divisor of given numbers.';
 const gcdGame = () => {
   const roundsData = [];
   for (let i = 0; i < maxRounds; i += 1) {
-    const firstNumber = getRandomInt(0, 50);
-    const secondNumber = getRandomInt(0, 50);
+    const firstNum = getRandomInt(0, 50);
+    const secondNum = getRandomInt(0, 50);
 
-    roundsData.push(
-      cons(`${firstNumber} ${secondNumber}`, gcd(firstNumber, secondNumber).toString())
-    );
+    roundsData.push(cons(`${firstNum} ${secondNum}`, gcd(firstNum, secondNum).toString()));
   }
 
   return { rules, roundsData };
