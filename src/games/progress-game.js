@@ -4,7 +4,7 @@ import { maxRounds } from '../index.js';
 
 const rules = 'What number is missing in the progression?';
 
-const progression = (start, step, length) => {
+const createProgression = (start, step, length) => {
   const values = [];
   for (let i = 0; i < length; i += 1) {
     values.push(start + i * step);
@@ -20,14 +20,14 @@ const progressGame = () => {
     const startNumber = getRandomInt(0, 20);
     const progressor = getRandomInt(1, 10);
 
-    const numbers = progression(startNumber, progressor, length);
+    const progression = createProgression(startNumber, progressor, length);
 
-    const hiddenElement = getRandomInt(0, numbers.length);
-    const correctAnswer = numbers[hiddenElement].toString();
+    const hiddenElement = getRandomInt(0, progression.length);
+    const correctAnswer = progression[hiddenElement].toString();
 
-    numbers[hiddenElement] = '..';
+    progression[hiddenElement] = '..';
 
-    roundsData.push(cons(numbers.join(' '), correctAnswer));
+    roundsData.push(cons(progression.join(' '), correctAnswer));
   }
 
   return { rules, roundsData };
