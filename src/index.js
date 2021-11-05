@@ -12,7 +12,7 @@ const gameMaster = (game) => {
   const gameInfo = game();
   console.log(gameInfo.rules);
 
-  for (const roundData of gameInfo.roundsData) {
+  gameInfo.roundsData.forEach((roundData) => {
     console.log(`Question: ${car(roundData)}`);
     const userAnswer = readlineSync.question('Your answer: ');
     const correctAnswer = cdr(roundData);
@@ -22,7 +22,7 @@ const gameMaster = (game) => {
       return;
     }
     console.log('Correct!');
-  }
+  });
 
   console.log(`Congratulations, ${name}!`);
 };
