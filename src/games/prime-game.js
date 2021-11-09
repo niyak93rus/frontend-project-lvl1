@@ -1,8 +1,8 @@
 import { cons } from '@hexlet/pairs';
-import { maxRounds } from '../index.js';
+import { roundsCount } from '../index.js';
 import getRandomInt from '../get-random-int.js';
 
-const rules = 'Answer "yes" if given number is prime. Otherwise answer "no".';
+const rule = 'Answer "yes" if given number is prime. Otherwise answer "no".';
 
 const isPrime = (number) => {
   if (number < 2) {
@@ -21,13 +21,13 @@ const isPrime = (number) => {
 const primeGame = () => {
   const roundsData = [];
 
-  for (let i = 0; i < maxRounds; i += 1) {
+  for (let i = 0; i < roundsCount; i += 1) {
     const number = getRandomInt(0, 100);
 
     roundsData.push(cons(number, isPrime(number) ? 'yes' : 'no'));
   }
 
-  return { rules, roundsData };
+  return { rule, roundsData };
 };
 
 export default primeGame;

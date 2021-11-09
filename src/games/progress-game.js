@@ -1,8 +1,8 @@
 import { cons } from '@hexlet/pairs';
 import getRandomInt from '../get-random-int.js';
-import { maxRounds } from '../index.js';
+import { roundsCount } from '../index.js';
 
-const rules = 'What number is missing in the progression?';
+const rule = 'What number is missing in the progression?';
 
 const createProgression = (start, step, length) => {
   const values = [];
@@ -15,7 +15,7 @@ const createProgression = (start, step, length) => {
 const progressGame = () => {
   const roundsData = [];
 
-  for (let counter = 0; counter < maxRounds; counter += 1) {
+  for (let counter = 0; counter < roundsCount; counter += 1) {
     const length = getRandomInt(5, 10);
     const startNumber = getRandomInt(0, 20);
     const progressor = getRandomInt(1, 10);
@@ -30,7 +30,7 @@ const progressGame = () => {
     roundsData.push(cons(progression.join(' '), correctAnswer));
   }
 
-  return { rules, roundsData };
+  return { rule, roundsData };
 };
 
 export default progressGame;

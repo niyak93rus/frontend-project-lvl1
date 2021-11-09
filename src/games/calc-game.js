@@ -1,6 +1,6 @@
 import { cons } from '@hexlet/pairs';
 import getRandomInt from '../get-random-int.js';
-import { maxRounds } from '../index.js';
+import { roundsCount } from '../index.js';
 
 const operands = ['+', '-', '*'];
 
@@ -24,11 +24,11 @@ const calculate = (num1, num2, operand) => {
 
 const getRandomItem = (items) => items[getRandomInt(0, items.length)];
 
-const rules = 'What is the result of the expression?';
+const rule = 'What is the result of the expression?';
 
 const calcGame = () => {
   const roundsData = [];
-  for (let i = 0; i < maxRounds; i += 1) {
+  for (let i = 0; i < roundsCount; i += 1) {
     const firstNum = getRandomInt(1, 25);
     const operand = getRandomItem(operands);
     const secondNum = getRandomInt(1, 25);
@@ -40,7 +40,7 @@ const calcGame = () => {
     roundsData.push(cons(expression, correctAnswer));
   }
 
-  return { rules, roundsData };
+  return { rule, roundsData };
 };
 
 export default calcGame;
