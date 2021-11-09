@@ -8,9 +8,10 @@ const rule = 'Answer "yes" if the number is even, otherwise answer "no".';
 const evenGame = () => {
   const roundsData = [];
   for (let i = 0; i < roundsCount; i += 1) {
-    const number = getRandomInt(1, 25);
+    const randomNumber = getRandomInt(1, 25);
+    const answer = isEven(randomNumber) ? 'yes' : 'no';
 
-    roundsData.push(cons(number, isEven(number) ? 'yes' : 'no'));
+    roundsData.push(cons(randomNumber, answer));
   }
 
   return { rule, roundsData };

@@ -11,7 +11,10 @@ const gcdGame = () => {
     const firstNum = getRandomInt(0, 50);
     const secondNum = getRandomInt(0, 50);
 
-    roundsData.push(cons(`${firstNum} ${secondNum}`, gcd(firstNum, secondNum).toString()));
+    const pairOfNumbers = `${firstNum} ${secondNum}`;
+    const answer = gcd(firstNum, secondNum).toString();
+
+    roundsData.push(cons(pairOfNumbers, answer));
   }
 
   return { rule, roundsData };

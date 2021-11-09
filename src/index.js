@@ -9,13 +9,13 @@ const play = (game) => {
   const name = readlineSync.question('May I have your name? ');
   console.log(`Hello, ${name}!`);
 
-  const gameInfo = game();
-  console.log(gameInfo.rule);
+  const { rule, roundsData } = game();
+  console.log(rule);
 
-  for (let i = 0; i < gameInfo.roundsData.length; i += 1) {
-    console.log(`Question: ${car(gameInfo.roundsData[i])}`);
+  for (let i = 0; i < roundsData.length; i += 1) {
+    console.log(`Question: ${car(roundsData[i])}`);
     const userAnswer = readlineSync.question('Your answer: ');
-    const correctAnswer = cdr(gameInfo.roundsData[i]);
+    const correctAnswer = cdr(roundsData[i]);
     if (userAnswer !== correctAnswer) {
       console.log(`'${userAnswer}' is wrong answer ;(. Correct answer was '${correctAnswer}'.`);
       console.log(`Let's try again, ${name}!`);
